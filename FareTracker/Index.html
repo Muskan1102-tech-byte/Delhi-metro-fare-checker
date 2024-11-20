@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delhi Metro Fare Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Delhi Metro Fare Checker</h1>
+            <p>Quickly find the fare between any two stations on the Delhi Metro.</p>
+        </header>
+        <main>
+            <div class="form">
+                <label for="startStation">Start Station:</label>
+                <input type="text" id="startStation" placeholder="Type to search..." oninput="filterStations('startStation')">
+
+                <label for="endStation">End Station:</label>
+                <input type="text" id="endStation" placeholder="Type to search..." oninput="filterStations('endStation')">
+
+                <ul id="suggestions" class="hidden"></ul>
+                <button onclick="checkFare()">Check Fare</button>
+            </div>
+            <div id="result"></div>
+        </main>
+        <footer>
+            <p>Made with ❤️ by Muskan</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
